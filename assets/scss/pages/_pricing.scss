@@ -17,7 +17,7 @@
             & .single-pricing {
                 background: #f8f8f8;
                 border-radius: 10px;
-                padding: 45px 55px 70px;
+                padding: 45px 55px 40px;
                 margin-top: 30px;
                 position: relative;
                 overflow: hidden;
@@ -181,6 +181,10 @@
                             }
                         }
                     }
+
+                    & .currency {
+                        color: #ffffff;
+                    }
                 }
 
             }
@@ -188,10 +192,8 @@
     }
 }
 
-.pricing-hover {
-    top:0px;
-& :hover {
-    top: -10px;
-    transition: top ease 0.5s;
-}
+
+.not {
+    text-decoration: line-through;
+    color: #ddd;
 }

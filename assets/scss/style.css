@@ -6625,7 +6625,7 @@ textarea:-ms-input-placeholder {
 .basnet-pricing-section .pricing-wrap .pricing-content-wrap .single-pricing {
   background: #f8f8f8;
   border-radius: 10px;
-  padding: 45px 55px 70px;
+  padding: 45px 55px 40px;
   margin-top: 30px;
   position: relative;
   overflow: hidden;
@@ -6755,13 +6755,13 @@ textarea:-ms-input-placeholder {
 .basnet-pricing-section .pricing-wrap .pricing-content-wrap .single-pricing.active .pricing-content .pricing-btn .pricing-contact {
   color: #5149f3;
 }
-
-.pricing-hover {
-  top: 0px;
+.basnet-pricing-section .pricing-wrap .pricing-content-wrap .single-pricing.active .currency {
+  color: #ffffff;
 }
-.pricing-hover :hover {
-  top: -10px;
-  transition: top ease 0.5s;
+
+.not {
+  text-decoration: line-through;
+  color: #ddd;
 }
 
 /*--
