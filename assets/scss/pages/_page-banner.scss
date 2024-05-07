@@ -14,8 +14,9 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    background-size: cover;
     
-    
+
     & .shape-1 {
         position: absolute;
         left: -32%;
@@ -45,6 +46,14 @@
     }
     
 
+}
+
+ .contact {
+    background-image: url(/assets/images/contacto/contacto.jpeg);
+}
+
+.prices {
+    background-image: url(/assets/images/precios/pricingHero.jpeg);
 }
 
 .page-banner-section {
@@ -116,6 +125,7 @@
         color: $white;
         position: relative;
         z-index: 1;
+        filter: drop-shadow(2px 4px 6px black);
         @media #{$desktop-device}{
             font-size: 48px;
         }
@@ -145,10 +155,6 @@
                     padding-right: 5px;
                     color: $white;
                 }
-            }
-
-            &.active {
-                
             }
             
         }

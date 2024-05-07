@@ -302,7 +302,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     -----------------------------------*/
     var swiper = new Swiper(".brand-active .swiper-container", {
         slidesPerView: 5,
-        spaceBetween: 30,
+        spaceBetween: 40,
         loop: true,
         breakpoints: {
           0: {
@@ -314,9 +314,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
           },
           768: {
             slidesPerView: 3,
-          },
-          992: {
-            slidesPerView: 5,
           },
         },
     });

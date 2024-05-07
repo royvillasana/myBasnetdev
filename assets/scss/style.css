@@ -46,11 +46,15 @@
 
 
 -----------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap");
+.container-fluid {
+  padding-left: 0;
+}
+
 /*----------------------------------------*/
 /*  01. Theme default CSS
 /*----------------------------------------*/
 /*-- Google Font --*/
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap");
 /*-- Common Style --*/
 *, *::after, *::before {
   box-sizing: border-box;
@@ -213,7 +217,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .section-padding-02 {
-  margin-top: 10%;
   padding: 10% 0;
   background-color: #e0e0e0;
 }
@@ -3223,6 +3226,7 @@ textarea:-ms-input-placeholder {
   position: relative;
   border-radius: 10px;
   padding: 40px 125px;
+  filter: hue-rotate(335deg);
 }
 @media only screen and (max-width: 575px) {
   .basnet-cta-section .cta-wrap {
@@ -5120,9 +5124,6 @@ textarea:-ms-input-placeholder {
   padding-bottom: 120px;
 }
 
-.basnet-brand-section-03 .brand-wrapper {
-  padding-top: 90px;
-}
 .basnet-brand-section-03 .brand-active {
   margin-top: 0;
 }
@@ -5657,6 +5658,16 @@ textarea:-ms-input-placeholder {
   height: 550px;
   width: 100%;
   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+}
+
+.contact-card {
+  display: grid;
+  height: 100%;
+}
+.contact-card .single-contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*--
@@ -6764,6 +6775,23 @@ textarea:-ms-input-placeholder {
   color: #ddd;
 }
 
+.single-brand img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0px 20px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-content: center;
+  margin: 0 20px;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
 /*--
 /*  03 - Solution CSS
 /*----------------------------------------*/
@@ -6905,6 +6933,7 @@ textarea:-ms-input-placeholder {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  background-size: cover;
 }
 .page-banner-section .shape-1 {
   position: absolute;
@@ -6929,6 +6958,14 @@ textarea:-ms-input-placeholder {
   right: -26%;
   bottom: -81%;
   z-index: -1;
+}
+
+.contact {
+  background-image: url(/assets/images/contacto/contacto.jpeg);
+}
+
+.prices {
+  background-image: url(/assets/images/precios/pricingHero.jpeg);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -7000,6 +7037,7 @@ textarea:-ms-input-placeholder {
   color: #ffffff;
   position: relative;
   z-index: 1;
+  filter: drop-shadow(2px 4px 6px black);
 }
 @media only screen and (max-width: 1199px) {
   .page-banner .title {
@@ -7034,6 +7072,7 @@ textarea:-ms-input-placeholder {
   padding-right: 5px;
   color: #ffffff;
 }
+
 /*--
 /*  18 - Blog Standard CSS
 /*----------------------------------------*/

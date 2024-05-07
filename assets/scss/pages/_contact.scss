@@ -294,3 +294,14 @@
         }
     }
 }
+
+.contact-card {
+    display: grid;
+    height: 100%;
+
+    & .single-contact-info {
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    }
+}
