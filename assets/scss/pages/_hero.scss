@@ -861,6 +861,14 @@
                 & .btn {
                     margin-top: 50px;
                 }
+
+                @media #{$large-mobile} {
+                    margin-left: 20px;
+                }
+            }
+
+            @media #{$large-mobile} {
+                margin: 0 20px;
             }
         }
 
@@ -881,6 +889,11 @@
                 & img {
                     width: 20vw;
                     max-width: 300px;
+
+                    @media #{$large-mobile} {
+                        top: 160px;
+                        position: absolute;
+                    }
                 }
             }
         }
@@ -911,7 +924,7 @@
 }
 
 .animated-text span::before {
-    content: 'Empresas';
+    content: 'Condominios';
     color: $primary;
     animation: words 20s infinite;
 
@@ -926,7 +939,7 @@
     height: 110%;
     border-left: 2px solid #EE7D28;
     right: -8px;
-    animation: cursor .6s infinite, typing 20s steps(14) infinite;
+    animation: cursor .6s infinite, typing 25s steps(20) infinite;
     transition: all;
 
 }
@@ -940,28 +953,23 @@
 @keyframes words {
 
     0%,
-    20% {
-        content: 'Empresas';
+    25% {
+        content: 'Comercios';
     }
 
-    21%,
-    40% {
-        content: 'Producción';
+    26%,
+    50% {
+        content: 'Manufacturas';
     }
 
-    41%,
-    60% {
-        content: 'Administración';
+    51%,
+    75% {
+        content: 'Condominios';
     }
 
-    61%,
-    80% {
-        content: 'Compras y Ventas';
-    }
-
-    81%,
+    76%,
     100% {
-        content: 'Nómina';
+        content: 'Escuelas';
     }
 }
 
@@ -1034,7 +1042,9 @@
         & .basnet-hero-wrap {
             padding-top: 90px;
             padding-bottom: 120px;
-            background-position: left center;
+            background-position: center;
+            border-radius: 0px;
+
 
             & .hero-images {
 
@@ -1043,6 +1053,7 @@
                     margin-top: 60px;
                     top: 35%;
                     right: 20%;
+                  
                 }
             }
 
@@ -1050,7 +1061,15 @@
                 visibility: hidden;
             }
         }
+
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+
+
     }
+
+   
 
     @media #{$large-mobile} {
         & .basnet-hero-wrap {
@@ -1073,7 +1092,7 @@
                     text-align: center;
                     margin-top: 60px;
                     top: 15%;
-                    right: 20%;
+                    right: -30%;
 
                 }
             }
@@ -1098,7 +1117,7 @@
                 & .images {
                     text-align: center;
                     margin-top: 60px;
-                    top: 15%;
+                    top: 0;
                     right: 15%;
 
                 }

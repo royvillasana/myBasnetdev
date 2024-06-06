@@ -22,6 +22,7 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 1;
+                text-align: center;
 
 
                 &::before {
@@ -59,6 +60,7 @@
                 & .pricing-price {
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     margin-top: 20px;
 
                     & .currency {
@@ -98,7 +100,7 @@
                 }
 
                 & .pricing-content {
-                    padding-top: 55px;
+                    padding-top: 24px;
 
                     & .pricing-list {
 
@@ -134,7 +136,7 @@
                 }
 
                 &.active {
-                    background: linear-gradient(-180deg,  #EE7D28 0% , #43baff 100%);
+                    background: linear-gradient(-180deg, #EE7D28 0%, #43baff 100%);
 
 
                     &::before {
@@ -200,14 +202,14 @@
 
 
 .single-brand {
-   
- & img {
-    width:  100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0px 20px;
-    
-}
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0px 20px;
+
+    }
 }
 
 .swiper-wrapper {
@@ -217,4 +219,32 @@
     flex-direction: row;
     align-items: center;
     padding: 10px;
+}
+
+
+@media (max-width:768px) {
+    .pricing-list {
+        display: none;
+
+    }
+
+    .basnet-pricing-section .pricing-wrap .pricing-content-wrap .single-pricing .pricing-content .pricing-btn {
+        padding-top: 0px;
+
+    }
+
+    .single-pricing {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .basnet-pricing-section .pricing-wrap .pricing-content-wrap .single-pricing .pricing-content .pricing-btn .btn {
+        margin-right: 0px;
+    }
+
+    .pricing-content {
+        text-align: center;
+    }
 }
