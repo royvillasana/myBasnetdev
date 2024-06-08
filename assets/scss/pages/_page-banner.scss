@@ -15,45 +15,38 @@
     overflow: hidden;
     z-index: 1;
     background-size: cover;
-    
-
     & .shape-1 {
         position: absolute;
         left: -32%;
         top: -35%;
         z-index: -1;
     }
-
     & .shape-2 {
         position: absolute;
         left: -11%;
         top: -30%;
         z-index: -1;
     }
-
     & .shape-3 {
         position: absolute;
         right: -2%;
         bottom: -27%;
         z-index: -1;
     }
-
     & .shape-4 {
         position: absolute;
         right: -26%;
         bottom: -81%;
         z-index: -1;
     }
-    
-
 }
 
- .contact {
-    background-image: url(/assets/images/contacto/contacto.jpeg);
+.contact {
+    background-image: url(mybasnetdev/assets/images/contacto/contacto.jpeg);
 }
 
 .prices {
-    background-image: url(/assets/images/precios/pricingHero.jpeg);
+    background-image: url(mybasnetdev/assets/images/precios/pricingHero.jpeg);
 }
 
 .page-banner-section {
@@ -63,7 +56,6 @@
             left: -70%;
             top: -47%;
         }
-
         & .shape-2 {
             left: -30%;
             top: -55%;
@@ -77,7 +69,7 @@
             bottom: -130%;
         }
     }
-    @media #{$tablet-device}{
+    @media #{$tablet-device} {
         min-height: 450px;
         & .shape-1 {
             left: -95%;
@@ -96,7 +88,7 @@
             bottom: -125%;
         }
     }
-    @media #{$large-mobile}{
+    @media #{$large-mobile} {
         min-height: 350px;
         & .shape-1 {
             display: none;
@@ -115,7 +107,6 @@
 
 // Page Banner
 .page-banner {
-    
     & .title {
         font-size: 60px;
         line-height: 1.25;
@@ -126,28 +117,24 @@
         position: relative;
         z-index: 1;
         filter: drop-shadow(2px 4px 6px black);
-        @media #{$desktop-device}{
+        @media #{$desktop-device} {
             font-size: 48px;
         }
-        @media #{$large-mobile}{
+        @media #{$large-mobile} {
             font-size: 30px;
         }
     }
-
     & .breadcrumb {
         margin-bottom: 0;
         margin-top: 10px;
-
         & .breadcrumb-item {
             color: $white;
             font-size: 20px;
             @media #{$tablet-device, $large-mobile} {
                 font-size: 16px;
             }
-
-            &+  .breadcrumb-item {
+            &+.breadcrumb-item {
                 padding-left: 8px;
-
                 &::before {
                     content: "/";
                     font-family: flaticon !important;
@@ -156,8 +143,6 @@
                     color: $white;
                 }
             }
-            
         }
     }
 }
-
