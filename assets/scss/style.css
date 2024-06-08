@@ -3683,7 +3683,7 @@ textarea:-ms-input-placeholder {
 }
 .basnet-about-section .shape-1 {
   position: absolute;
-  width: 100%;
+  width: 90px;
   height: 130px;
   right: 0;
   left: 0px;
@@ -3698,6 +3698,10 @@ textarea:-ms-input-placeholder {
 }
 .basnet-about-section .about-img-wrap .about-img img {
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90px;
+  height: 130px;
 }
 .basnet-about-section .about-img-wrap .about-img.about-img-big {
   padding-top: 80px;
@@ -3788,6 +3792,10 @@ textarea:-ms-input-placeholder {
 }
 .basnet-about-section .about-content-wrap .play-btn a:hover i {
   background: linear-gradient(180deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
+}
+
+.about-banner {
+  background-image: url("/assets/images/about/aboutUs.jpeg");
 }
 
 @media only screen and (max-width: 1199px) {
@@ -4472,11 +4480,12 @@ textarea:-ms-input-placeholder {
   display: flex;
   position: relative;
   z-index: 1;
+  margin-top: 60px;
 }
 .basnet-about-section-07 .about-img-wrap .shape-1 {
   position: absolute;
   right: 55px;
-  bottom: -30px;
+  bottom: 10px;
   z-index: -1;
 }
 .basnet-about-section-07 .about-img-wrap .about-img {
@@ -4484,13 +4493,21 @@ textarea:-ms-input-placeholder {
 }
 .basnet-about-section-07 .about-img-wrap .about-img img {
   border-radius: 10px;
+  max-width: 300px;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .basnet-about-section-07 .about-img-wrap .about-img:first-child {
   padding-right: 15px;
 }
 .basnet-about-section-07 .about-img-wrap .about-img:last-child {
   padding-left: 15px;
-  margin-top: 75px;
+  margin-top: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  max-width: 320px;
 }
 .basnet-about-section-07 .about-content-wrap {
   padding-left: 90px;
@@ -4506,7 +4523,7 @@ textarea:-ms-input-placeholder {
   padding-top: 15px;
 }
 .basnet-about-section-07 .about-content-wrap .about-list-03 .about-list-item-03 {
-  padding-right: 40px;
+  padding-right: 10px;
   margin-top: 25px;
 }
 .basnet-about-section-07 .about-content-wrap .about-list-03 .about-list-item-03 .title {
