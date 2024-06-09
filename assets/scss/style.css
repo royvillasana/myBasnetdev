@@ -4498,12 +4498,15 @@ textarea:-ms-input-placeholder {
   .basnet-about-section-07 .about-img-wrap .about-img img {
     max-width: 240px;
     max-height: 230px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
-.basnet-about-section-07 .about-img-wrap .about-img:first-child {
+.basnet-about-section-07 .about-img-wrap:first-child {
   padding-right: 15px;
 }
-.basnet-about-section-07 .about-img-wrap .about-img:last-child {
+.basnet-about-section-07 .about-img-wrap:last-child {
   padding-left: 15px;
   margin-top: 80px;
   -o-object-fit: contain;
@@ -6351,7 +6354,7 @@ textarea:-ms-input-placeholder {
   height: 65px;
   line-height: 65px;
   text-align: center;
-  background: linear-gradient(-180deg, rgb(67, 186, 255) 0%, rgb(113, 65, 177) 100%);
+  background: linear-gradient(-180deg, rgb(66, 185, 255) 0%, rgb(8, 106, 216) 100%);
   color: #fff;
   font-size: 14px;
   line-height: 18px;
