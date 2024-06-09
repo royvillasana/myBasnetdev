@@ -129,10 +129,6 @@
     }
 }
 
-.about-banner {
-    background-image: url(mybasnetdev/assets/images/about/aboutUs.jpeg);
-}
-
 .basnet-about-section {
     @media #{$desktop-device} {
         padding-top: 165px;
@@ -884,43 +880,50 @@
                 max-width: 300px;
                 height: 80%;
                 object-fit: cover;
+                @media #{$small-mobile} {
+                    max-width: 240px;
+                    max-height: 230px;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
-            &:first-child {
-                padding-right: 15px;
-            }
-            &:last-child {
-                padding-left: 15px;
-                margin-top: 80px;
-                object-fit: contain;
-                height: auto;
-                max-width: 320px;
-            }
+        }
+        &:first-child {
+            padding-right: 15px;
+        }
+        &:last-child {
+            padding-left: 15px;
+            margin-top: 80px;
+            object-fit: contain;
+            height: auto;
+            max-width: 320px;
         }
     }
-    & .about-content-wrap {
-        padding-left: 90px;
-        & .text {
-            font-size: 16px;
-            line-height: 30px;
+}
+
+& .about-content-wrap {
+    padding-left: 90px;
+    & .text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-top: 25px;
+    }
+    & .about-list-03 {
+        border-top: 1px solid #e1e1e1;
+        margin-top: 40px;
+        padding-top: 15px;
+        & .about-list-item-03 {
+            padding-right: 10px;
             margin-top: 25px;
-        }
-        & .about-list-03 {
-            border-top: 1px solid #e1e1e1;
-            margin-top: 40px;
-            padding-top: 15px;
-            & .about-list-item-03 {
-                padding-right: 10px;
-                margin-top: 25px;
-                & .title {
-                    font-size: 18px;
-                    line-height: 30px;
-                    font-weight: 700;
-                    color: #231e32;
-                }
-                & p {
-                    font-size: 16px;
-                    line-height: 30px;
-                }
+            & .title {
+                font-size: 18px;
+                line-height: 30px;
+                font-weight: 700;
+                color: #231e32;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 30px;
             }
         }
     }

@@ -3794,10 +3794,6 @@ textarea:-ms-input-placeholder {
   background: linear-gradient(180deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
 }
 
-.about-banner {
-  background-image: url(mybasnetdev/assets/images/about/aboutUs.jpeg);
-}
-
 @media only screen and (max-width: 1199px) {
   .basnet-about-section {
     padding-top: 165px;
@@ -4497,6 +4493,12 @@ textarea:-ms-input-placeholder {
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 575px) {
+  .basnet-about-section-07 .about-img-wrap .about-img img {
+    max-width: 240px;
+    max-height: 230px;
+  }
 }
 .basnet-about-section-07 .about-img-wrap .about-img:first-child {
   padding-right: 15px;
@@ -7026,11 +7028,15 @@ textarea:-ms-input-placeholder {
 }
 
 .contact {
-  background-image: url(mybasnetdev/assets/images/contacto/contacto.jpeg);
+  background-image: url(/assets/images/contacto/contacto.jpeg);
 }
 
 .prices {
-  background-image: url(mybasnetdev/assets/images/precios/pricingHero.jpeg);
+  background-image: url(/assets/images/precios/pricingHero.jpeg);
+}
+
+.about-banner {
+  background-image: url(/assets/images/about/aboutUs.jpeg);
 }
 
 @media only screen and (max-width: 1199px) {
