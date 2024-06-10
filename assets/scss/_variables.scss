@@ -1,33 +1,23 @@
 // Font Family
-$body-font: 'Jost', sans-serif;
-$heading-font: 'Barlow', sans-serif;
-
-
-
+$body-font: 'Jost',
+sans-serif;
+$heading-font: 'Barlow',
+sans-serif;
 // Colors ---------------
-
 $white: #ffffff;
 $black: #000000;
 $grey: #f7f8f8;
 $grey-bg1: #eef2f3;
 $grey1: #e5e5e5;
 $grey-light: #d6d5d7;
-
 $footer-bg: #13181c;
 $footer-text: #c4c5c7;
-
-
-
 // Body Color
 $body-color: #4c4d56;
 $body-light: #54606c;
-
 // Heading Color
 $heading-color: #0e0e0e;
 $heading-color1: #333333;
-
-
-
 // Template Colors
 $primary: #086ad8;
 $primary-2: #ff5538;
@@ -41,11 +31,8 @@ $warning: #FFC107;
 $info: #17a2b8;
 $light: #f8f9fa;
 $dark: #343a40;
-
-
 $transition-default: all .3s linear;
 $transition-default2: all .5s linear;
-
 // Socail Color
 $android: #7AC157;
 $apple: #B8B8B8;
@@ -104,20 +91,15 @@ $whatsapp: #189D0E;
 $xbox: #107C0F;
 $yahoo: #4101AF;
 $youtube: #FE0000;
-
-
-
 // Responsive Variables
-$extraBig-device : 'only screen and (min-width: 1600px)';
-$medium-device : 'only screen and (min-width: 1400px) and (max-width: 1599px)';
-$laptop-device : 'only screen and (max-width: 1399px)';
-$desktop-device : 'only screen and (max-width: 1199px)';
+$extraBig-device: 'only screen and (min-width: 1600px)';
+$medium-device: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$laptop-device: 'only screen and (max-width: 1399px)';
+$desktop-device: 'only screen and (max-width: 1199px)';
 $tablet-device:'only screen and (max-width: 991px)';
 $large-mobile:'only screen and (max-width: 767px)';
 $small-mobile: 'only screen and (max-width: 575px)';
 $extra-small-mobile: 'only screen and (max-width: 449px)';
-
-
 .container-fluid {
     padding-left: 0;
 }
