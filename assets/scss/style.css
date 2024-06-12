@@ -7053,6 +7053,10 @@ textarea:-ms-input-placeholder {
   background-image: url(../images/about/aboutUs.jpeg);
 }
 
+.chars-banner {
+  background-image: url(../images/about/caracteristicas.jpeg);
+}
+
 @media only screen and (max-width: 1199px) {
   .page-banner-section {
     min-height: 520px;

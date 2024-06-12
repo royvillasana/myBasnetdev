@@ -53,6 +53,10 @@
     background-image: url(../images/about/aboutUs.jpeg);
 }
 
+.chars-banner {
+    background-image: url(../images/about/caracteristicas.jpeg);
+}
+
 .page-banner-section {
     @media #{$desktop-device} {
         min-height: 520px;
