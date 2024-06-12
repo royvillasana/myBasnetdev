@@ -78,7 +78,7 @@
                     display: inline-block;
                     text-align: center;
                     border-radius: 50%;
-                    background: linear-gradient( 240deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
+                    background: linear-gradient(240deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
                     color: $white;
                     transition: $transition-default;
                 }
@@ -121,7 +121,7 @@
                 }
                 &:hover {
                     & i {
-                        background: linear-gradient( 180deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
+                        background: linear-gradient(180deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
                     }
                 }
             }
@@ -536,7 +536,7 @@
         text-align: center;
         position: relative;
         border-radius: 50%;
-        background: linear-gradient( 240deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
+        background: linear-gradient(240deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
         color: $white;
         transition: $transition-default;
         &::before {
@@ -570,7 +570,7 @@
             animation-delay: 0s;
         }
         &:hover {
-            background: linear-gradient( 180deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
+            background: linear-gradient(180deg, rgb(8, 106, 216) 0%, rgb(66, 185, 255) 100%);
         }
     }
 }
@@ -864,6 +864,9 @@
 .basnet-about-section-07 {
     & .about-img-wrap {
         display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
         position: relative;
         z-index: 1;
         margin-top: 60px;
@@ -875,11 +878,13 @@
         }
         & .about-img {
             overflow: hidden;
+            display: flex;
+            border-radius: 10px;
+            height: fit-content;
             & img {
-                border-radius: 10px;
                 max-width: 300px;
-                height: 80%;
-                object-fit: cover;
+                height: auto;
+                object-fit: contain;
                 @media #{$small-mobile} {
                     max-width: 240px;
                     max-height: 230px;

@@ -3240,6 +3240,10 @@ textarea:-ms-input-placeholder {
   }
 }
 
+.margin-characteristics {
+  padding-top: 4rem;
+}
+
 /*--
 /*  14 - CTA CSS
 /*----------------------------------------*/
@@ -4474,6 +4478,9 @@ textarea:-ms-input-placeholder {
 
 .basnet-about-section-07 .about-img-wrap {
   display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
   margin-top: 60px;
@@ -4486,13 +4493,16 @@ textarea:-ms-input-placeholder {
 }
 .basnet-about-section-07 .about-img-wrap .about-img {
   overflow: hidden;
+  display: flex;
+  border-radius: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .basnet-about-section-07 .about-img-wrap .about-img img {
-  border-radius: 10px;
   max-width: 300px;
-  height: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media only screen and (max-width: 575px) {
   .basnet-about-section-07 .about-img-wrap .about-img img {
@@ -6194,6 +6204,7 @@ textarea:-ms-input-placeholder {
 .basnet-choose-us-section-04 .choose-us-item-02 {
   border: 1px solid #e1e1e1;
   box-shadow: none;
+  height: 100%;
 }
 
 /*--
