@@ -15,26 +15,48 @@
     max-width: 170px;
 }
 
+.google-logo img {
+    padding-top: 10px;
+    width: 180px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: baseline;
+    @media #{$large-mobile} {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footer-center {
+    @media #{$large-mobile} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 // Footer Copyright
 .footer-copyright-area {
     border-top: 1px solid #1b202f;
     padding-top: 15px;
     padding-bottom: 30px;
-
 }
 
 // Footer Copyright Wrapper
-.copyright-wrapper {
- 
-}
+.copyright-wrapper {}
 
 // Footer Copyright Text
 .copyright-text {
     margin-top: 15px;
-    @media #{$large-mobile}{
+    @media #{$large-mobile} {
         text-align: center;
     }
-
     & p {
         font-size: 14px;
         color: $footer-text;
@@ -42,19 +64,15 @@
 }
 
 // Home Style Two
-
 .footer-section-02 {
     background: $black;
-
     & .footer-widget-wrap {
         padding-top: 130px;
     }
 }
 
-
 // Home Style Three
 .footer-section-03 {
-
     & .footer-widget-wrap {
         padding-top: 140px;
     }
@@ -62,14 +80,10 @@
 
 // Home Style Four
 .footer-section-04 {
-
     & .footer-copyright-area {
         border-top: 1px solid #e0e0e0;
-    
     }
-
     & .copyright-text {
-    
         & p {
             font-size: 14px;
             color: $heading-color;
@@ -87,13 +101,12 @@
     cursor: pointer;
     display: block;
     border-radius: 50px;
-    box-shadow: inset 0 0 0 2px rgba(0, 93, 224,0.2);
+    box-shadow: inset 0 0 0 2px rgba(0, 93, 224, 0.2);
     opacity: 0;
     visibility: hidden;
     transform: translateX(130%);
     z-index: 99;
     transition: all 200ms linear;
-
     &::after {
         position: absolute;
         content: "\f108";
@@ -111,15 +124,11 @@
         display: block;
         z-index: 1;
     }
-
     & svg {
-
         & path {
             fill: none;
         }
-
         &.progress-circle {
-
             & path {
                 stroke: $primary;
                 stroke-width: 4;
@@ -127,7 +136,6 @@
             }
         }
     }
-
     &.active-progress {
         opacity: 1;
         visibility: visible;
@@ -141,15 +149,9 @@
     &::after {
         color: $primary-2;
     }
-
     & svg {
-
-        & path {
-            
-        }
-
+        & path {}
         &.progress-circle {
-
             & path {
                 stroke: $primary-2;
             }

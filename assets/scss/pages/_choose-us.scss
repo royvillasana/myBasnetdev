@@ -290,6 +290,9 @@
     position: relative;
     & .choose-us-img {
         & img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
             transition: $transition-default;
         }
     }
