@@ -1,31 +1,44 @@
 /*----------------------------------------*/
+
+
 /*  01. Theme default CSS
 /*----------------------------------------*/
 
 @mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}  
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
 }
 
+
 /*-- Google Font --*/
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap');
 
-
-
 /*-- Common Style --*/
-*, *::after, *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     width: 100vw !important;
 }
 
-body{
+body {
     font-size: 14px;
     line-height: 1.75;
     font-weight: 400;
@@ -36,14 +49,18 @@ body{
     overflow-X: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     color: "";
     &[dir="rtl"] {
         text-align: right;
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $heading-font;
     color: $heading-color;
     font-weight: 700;
@@ -52,51 +69,62 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
-h1{
+h1 {
     font-size: 36px;
     // Responisve
     @media #{$large-mobile} {
         font-size: 30px;
     }
 }
-h2{
+
+h2 {
     font-size: 30px;
     // Responisve
     @media #{$large-mobile} {
         font-size: 24px;
     }
 }
-h3{
+
+h3 {
     font-size: 24px;
     // Responisve
     @media #{$large-mobile} {
         font-size: 20px;
     }
 }
+
 h4 {
     font-size: 18px;
 }
+
 h5 {
     font-size: 16px;
 }
+
 h6 {
     font-size: 14px;
 }
+
 p {
     margin-bottom: 0;
 }
-a, button {
+
+a,
+button {
     color: inherit;
     display: inline-block;
     line-height: inherit;
     text-decoration: none;
     cursor: pointer;
 }
-a, button, img, input {
+
+a,
+button,
+img,
+input {
     transition: $transition-default;
     outline: 0;
-
-    &:focus{
+    &:focus {
         outline: 0;
     }
 }
@@ -106,28 +134,35 @@ a:focus {
     outline: none;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: none;
     color: $primary;
 }
-ul,ol{
+
+ul,
+ol {
     padding: 0;
     list-style: none;
     margin: 0;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
     cursor: pointer;
 }
 
-input, textarea {
+input,
+textarea {
     @include placeholder {
         opacity: 1;
     }
 }
 
+
 /*-- Common Classes --*/
-.section, 
+
+.section,
 .main-wrapper {
     float: left;
     width: 100%;
@@ -135,10 +170,10 @@ input, textarea {
 
 
 /*--Section Spacing--*/
+
 .section-padding {
     padding-top: 120px;
     padding-bottom: 120px;
-
     // Responsive
     @media #{$desktop-device} {
         padding-top: 100px;
@@ -153,10 +188,9 @@ input, textarea {
         padding-bottom: 60px;
     }
 }
+
 .section-padding-02 {
     padding: 10% 0;
-    background-color: #e0e0e0;
-
 }
 
 .gray-bk {
@@ -165,7 +199,6 @@ input, textarea {
 
 .section-padding-03 {
     padding-top: 140px;
-
     // Responsive
     @media #{$desktop-device} {
         padding-top: 100px;
@@ -177,29 +210,27 @@ input, textarea {
         padding-top: 60px;
     }
 }
- 
+
 
 /*--Section Title--*/
-.section-title{
+
+.section-title {
     // max-width: 690px;
     // margin: 0 auto;
-
-    & .title{
+    & .title {
         font-size: 48px;
         line-height: 54px;
         font-family: $heading-font;
         font-weight: 600;
         color: $heading-color;
-        @media #{$large-mobile}{
+        @media #{$large-mobile} {
             font-size: 30px;
             line-height: 36px;
         }
-
         &.white {
             color: $white;
         }
     }
-
     & .sub-title {
         font-size: 14px;
         line-height: 30px;
@@ -209,7 +240,6 @@ input, textarea {
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-bottom: 12px;
-
         &.color-2 {
             color: $primary-2;
         }
@@ -220,15 +250,15 @@ input, textarea {
             color: $white;
         }
     }
-    
 }
 
 
 /*--Section Title Two--*/
-.section-title2{
+
+.section-title2 {
     max-width: 690px;
     margin: 0 auto;
-    & .title{
+    & .title {
         font-size: 48px;
         line-height: 54px;
         font-family: $heading-font;
@@ -241,13 +271,11 @@ input, textarea {
             font-size: 36px;
             line-height: 48px;
         }
-        @media #{$large-mobile}{
+        @media #{$large-mobile} {
             font-size: 28px;
             line-height: 36px;
         }
-
     }
-
     & .sub-title {
         font-size: 12px;
         line-height: 30px;
@@ -257,7 +285,6 @@ input, textarea {
         text-transform: uppercase;
         margin-bottom: 10px;
     }
-
     & p {
         font-size: 16px;
         line-height: 30px;
@@ -267,12 +294,12 @@ input, textarea {
         padding: 0 50px;
         margin-top: 20px;
     }
-    
 }
 
-  
+
 /*--Swiper Pagination--*/
-.swiper-pagination{
+
+.swiper-pagination {
     & .swiper-pagination-bullet {
         border-radius: 50%;
         background-color: #e8e8e8;
@@ -281,7 +308,6 @@ input, textarea {
         transition: $transition-default;
         position: relative;
         opacity: 1;
-
         &::after {
             content: "";
             position: absolute;
@@ -294,10 +320,8 @@ input, textarea {
             border-radius: 50%;
             transition: $transition-default;
         }
-          
-        &.swiper-pagination-bullet-active{
+        &.swiper-pagination-bullet-active {
             background-color: $primary;
-
             &::after {
                 transform: scale(1);
             }
@@ -306,8 +330,8 @@ input, textarea {
 }
 
 
-
 /*--  Preloader Styles  --*/
+
 #preloader {
     position: fixed;
     top: 0;
@@ -316,7 +340,6 @@ input, textarea {
     bottom: 0;
     background-color: $white;
     z-index: 999999;
-
     & .preloader {
         width: 50px;
         height: 50px;
@@ -327,7 +350,6 @@ input, textarea {
         position: absolute;
         top: 50%;
         left: 50%;
-
         & span {
             position: absolute;
             display: inline-block;
@@ -336,7 +358,6 @@ input, textarea {
             border-radius: 50%;
             background-color: $primary;
             animation: preloader 1.3s linear infinite;
-
             &:last-child {
                 animation-delay: -0.8s;
             }
@@ -349,10 +370,8 @@ input, textarea {
         transform: scale(0, 0);
         opacity: 0.5;
     }
-
     100% {
         transform: scale(1, 1);
         opacity: 0;
     }
 }
-

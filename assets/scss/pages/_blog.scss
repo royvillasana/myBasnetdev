@@ -21,6 +21,7 @@
             display: block;
             & img {
                 transition: $transition-default;
+                width: 100%;
             }
         }
         & .top-meta {
@@ -117,7 +118,7 @@
         & .blog-image {
             & a {
                 & img {
-                    transform: scale(1.1);
+                    transform: scale(1.2);
                 }
             }
         }

@@ -55,7 +55,9 @@
 /*----------------------------------------*/
 /*-- Google Font --*/
 /*-- Common Style --*/
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -82,7 +84,12 @@ body[dir=rtl] {
   text-align: right;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Barlow", sans-serif;
   color: #0e0e0e;
   font-weight: 700;
@@ -134,7 +141,8 @@ p {
   margin-bottom: 0;
 }
 
-a, button {
+a,
+button {
   color: inherit;
   display: inline-block;
   line-height: inherit;
@@ -142,11 +150,17 @@ a, button {
   cursor: pointer;
 }
 
-a, button, img, input {
+a,
+button,
+img,
+input {
   transition: all 0.3s linear;
   outline: 0;
 }
-a:focus, button:focus, img:focus, input:focus {
+a:focus,
+button:focus,
+img:focus,
+input:focus {
   outline: 0;
 }
 
@@ -161,26 +175,32 @@ a:hover {
   color: #086ad8;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   list-style: none;
   margin: 0;
 }
 
-button, input[type=submit] {
+button,
+input[type=submit] {
   cursor: pointer;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   opacity: 1;
 }
-input:-moz-placeholder, textarea:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder {
   opacity: 1;
 }
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
 }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
 }
 
@@ -217,7 +237,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .section-padding-02 {
   padding: 10% 0;
-  background-color: #e0e0e0;
 }
 
 .gray-bk {
@@ -4717,7 +4736,6 @@ textarea:-ms-input-placeholder {
 .single-counter-02 p {
   font-size: 14px;
   line-height: 30px;
-  text-transform: capitalize;
   color: #ffffff;
 }
 
@@ -6358,6 +6376,7 @@ textarea:-ms-input-placeholder {
 }
 .single-blog .blog-image a img {
   transition: all 0.3s linear;
+  width: 100%;
 }
 .single-blog .blog-image .top-meta {
   position: absolute;
@@ -6449,7 +6468,7 @@ textarea:-ms-input-placeholder {
   margin-left: 5px;
 }
 .single-blog:hover .blog-image a img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .basnet-blog-grid-wrap {

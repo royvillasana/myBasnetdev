@@ -2,16 +2,13 @@
 /*  07 - Counter CSS
 /*----------------------------------------*/
 
-
 .basnet-counter-section {
     background: #e5effa;
     padding-top: 60px;
     padding-bottom: 80px;
-
     & .counter-wrap {
         margin-top: -30px;
     }
-    
 }
 
 .single-counter {
@@ -27,7 +24,6 @@
         box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.09);
         border-radius: 10px;
     }
-
     & .counter-content {
         margin-left: 20px;
         & span {
@@ -37,7 +33,6 @@
             font-weight: 700;
             color: $primary;
         }
-
         & p {
             font-size: 12px;
             line-height: 26px;
@@ -49,9 +44,7 @@
 }
 
 // Home Style Three
-
 .basnet-counter-section-02 {
-
     & .counter-wrap {
         border: 1px solid #e1e1e1;
         background: $white;
@@ -60,11 +53,9 @@
         z-index: 5;
         padding: 15px 25px 75px;
     }
-
-    & .single-counter  {
+    & .single-counter {
         position: relative;
         margin-left: 30px;
-
         &::before {
             content: "";
             position: absolute;
@@ -75,23 +66,21 @@
             height: 220px;
             transform: translateY(-44%);
         }
-
         &.single-counter-4 {
-
             &::before {
                 display: none;
             }
         }
     }
 }
+
 .basnet-counter-section-02 {
     @media #{$desktop-device} {
         & .counter-wrap {
             padding: 15px 55px 75px;
         }
-        & .single-counter  {
+        & .single-counter {
             margin-left: 0px;
-    
             &::before {
                 display: none;
             }
@@ -105,7 +94,6 @@
 }
 
 // Home Style Five
-
 .basnet-counter-section-03 {
     background: #010642;
     background-repeat: no-repeat;
@@ -115,7 +103,6 @@
     padding-bottom: 110px;
     position: relative;
     z-index: 1;
-
     &::before {
         content: "";
         position: absolute;
@@ -127,9 +114,9 @@
         z-index: -1;
     }
 }
+
 .single-counter-02 {
     margin-top: 30px;
-    
     & span {
         font-size: 50px;
         line-height: 30px;
@@ -137,26 +124,21 @@
         font-weight: 700;
         color: $primary;
     }
-
     & p {
         font-size: 14px;
         line-height: 30px;
-        text-transform: capitalize;
         color: $white;
     }
 }
 
 // About Page Style
-
 .basnet-counter-section-04 {
     background: none;
     padding-top: 0;
     padding-bottom: 0;
-
     &::before {
         display: none;
     }
-
     & .counter-wrap {
         background: linear-gradient(55deg, #693eaa 25%, #47bbff 100%);
         background-repeat: no-repeat;
@@ -167,13 +149,10 @@
         margin-bottom: -110px;
         padding-top: 65px;
         padding-bottom: 95px;
-
         & .single-counter-02 {
-            
             & span {
                 color: $white;
             }
         }
     }
 }
-
