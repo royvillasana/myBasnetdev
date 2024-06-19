@@ -4,7 +4,7 @@
     /*--
         preloader
     -----------------------------------*/
-     $(window).on('load', function(event) {
+    $(window).on('load', function(event) {
         $('#preloader').delay(500).fadeOut(500);
     });
 
@@ -12,7 +12,7 @@
         Header Sticky
     -----------------------------------*/
 
-    window.onscroll = function () {
+    window.onscroll = function() {
         const left = document.getElementById("header");
 
         if (left.scrollTop > 50 || self.pageYOffset > 50) {
@@ -20,30 +20,30 @@
         } else {
             left.classList.remove("sticky");
         }
-    }  
+    }
 
     /*--
         Tooltip
     -----------------------------------*/
-    
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
 
-    
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+
     /*--
         Menu parent Element Icon
     -----------------------------------*/
     const $subMenu = document.querySelectorAll('.sub-menu');
-    $subMenu.forEach(function (subMenu) {
+    $subMenu.forEach(function(subMenu) {
         const menuExpand = document.createElement('span')
         menuExpand.classList.add('menu-icon')
-        // menuExpand.innerHTML = '+'
+            // menuExpand.innerHTML = '+'
         subMenu.parentElement.insertBefore(menuExpand, subMenu)
         if (subMenu.classList.contains('mega-menu')) {
             subMenu.classList.remove('mega-menu')
-            subMenu.querySelectorAll('ul').forEach(function (ul) {
+            subMenu.querySelectorAll('ul').forEach(function(ul) {
                 ul.classList.add('sub-menu')
                 const menuExpand = document.createElement('span')
                 menuExpand.classList.add('menu-icon')
@@ -56,42 +56,42 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     /*--
         Search Js
     -----------------------------------*/
-	var $searchWrap = $('.search-wrap');
-	var $navSearch = $('.search-btn');
-	var $searchClose = $('#search-close');
+    var $searchWrap = $('.search-wrap');
+    var $navSearch = $('.search-btn');
+    var $searchClose = $('#search-close');
 
-	$('.search-btn').on('click', function (e) {
-		e.preventDefault();
-		$searchWrap.animate({ opacity: 'toggle' }, 500);
-		$navSearch.add($searchClose).addClass("open");
-	});
+    $('.search-btn').on('click', function(e) {
+        e.preventDefault();
+        $searchWrap.animate({ opacity: 'toggle' }, 500);
+        $navSearch.add($searchClose).addClass("open");
+    });
 
-	$('.search-close').on('click', function (e) {
-		e.preventDefault();
-		$searchWrap.animate({ opacity: 'toggle' }, 500);
-		$navSearch.add($searchClose).removeClass("open");
-	});
+    $('.search-close').on('click', function(e) {
+        e.preventDefault();
+        $searchWrap.animate({ opacity: 'toggle' }, 500);
+        $navSearch.add($searchClose).removeClass("open");
+    });
 
-	function closeSearch() {
-		$searchWrap.fadeOut(200);
-		$navSearch.add($searchClose).removeClass("open");
-	}
+    function closeSearch() {
+        $searchWrap.fadeOut(200);
+        $navSearch.add($searchClose).removeClass("open");
+    }
 
-	$(document.body).on('click', function (e) {
-		closeSearch();
-	});
+    $(document.body).on('click', function(e) {
+        closeSearch();
+    });
 
-	$(".search-btn, .main-search-input").on('click', function (e) {
-		e.stopPropagation();
-	});
+    $(".search-btn, .main-search-input").on('click', function(e) {
+        e.stopPropagation();
+    });
 
-        
+
     /*--
         Mobile Menu 
     -----------------------------------*/
 
     /* Get Sibling */
-    const getSiblings = function (elem) {
+    const getSiblings = function(elem) {
         const siblings = []
         let sibling = elem.parentNode.firstChild
         while (sibling) {
@@ -159,18 +159,18 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     /*--
 		Offcanvas/Collapseable Menu 
 	-----------------------------------*/
-    const offCanvasMenu = function (selector) {
+    const offCanvasMenu = function(selector) {
 
         const $offCanvasNav = document.querySelector(selector),
             $subMenu = $offCanvasNav.querySelectorAll('.sub-menu');
-        $subMenu.forEach(function (subMenu) {
+        $subMenu.forEach(function(subMenu) {
             const menuExpand = document.createElement('span')
             menuExpand.classList.add('menu-expand')
-            // menuExpand.innerHTML = '+'
+                // menuExpand.innerHTML = '+'
             subMenu.parentElement.insertBefore(menuExpand, subMenu)
             if (subMenu.classList.contains('mega-menu')) {
                 subMenu.classList.remove('mega-menu')
-                subMenu.querySelectorAll('ul').forEach(function (ul) {
+                subMenu.querySelectorAll('ul').forEach(function(ul) {
                     ul.classList.add('sub-menu')
                     const menuExpand = document.createElement('span')
                     menuExpand.classList.add('menu-expand')
@@ -180,22 +180,22 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             }
         })
 
-        $offCanvasNav.querySelectorAll('.menu-expand').forEach(function (item) {
-            item.addEventListener('click', function (e) {
+        $offCanvasNav.querySelectorAll('.menu-expand').forEach(function(item) {
+            item.addEventListener('click', function(e) {
                 e.preventDefault()
                 const parent = this.parentElement
                 if (parent.classList.contains('active')) {
                     parent.classList.remove('active');
-                    parent.querySelectorAll('.sub-menu').forEach(function (subMenu) {
+                    parent.querySelectorAll('.sub-menu').forEach(function(subMenu) {
                         subMenu.parentElement.classList.remove('active');
                         slideUp(subMenu)
                     })
                 } else {
                     parent.classList.add('active');
                     slideDown(this.nextElementSibling)
-                    getSiblings(parent).forEach(function (item) {
+                    getSiblings(parent).forEach(function(item) {
                         item.classList.remove('active')
-                        item.querySelectorAll('.sub-menu').forEach(function (subMenu) {
+                        item.querySelectorAll('.sub-menu').forEach(function(subMenu) {
                             subMenu.parentElement.classList.remove('active');
                             slideUp(subMenu)
                         })
@@ -206,63 +206,63 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     }
     offCanvasMenu('.offcanvas-menu');
 
-  /*--
-    magnificPopup video view 
-  -----------------------------------*/	
-	$('.popup-video').magnificPopup({
-		type: 'iframe'
-	});
+    /*--
+      magnificPopup video view 
+    -----------------------------------*/
+    $('.popup-video').magnificPopup({
+        type: 'iframe'
+    });
 
-  /*--    
-      Counter Up
-  -----------------------------------*/  
+    /*--    
+        Counter Up
+    -----------------------------------*/
 
     $('.counter').counterUp({
         delay: 10,
         time: 1500,
     });
 
-  
- 
+
+
     /*--
         Case Study Active
 	-----------------------------------*/
-  var swiper = new Swiper('.case-study-active', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: true,
-    pagination: {
-        el: ".case-study-active .swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      576: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      992: {
-        slidesPerView: 2,
-      },
-      1200: {
+    var swiper = new Swiper('.case-study-active', {
         slidesPerView: 3,
-      },
-    }
-  });
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: ".case-study-active .swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            992: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        }
+    });
 
 
-  /*--
+    /*--
         Testimonial Active
 	-----------------------------------*/
     var swiper = new Swiper('.testimonial-active', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,        
+        loop: true,
     });
 
     /*--    
@@ -277,25 +277,25 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             clickable: true,
         },
         breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          576: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-          },
-          992: {
-            slidesPerView: 1,
-          },
-          1400: {
-            slidesPerView: 2,
-          },
+            0: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            992: {
+                slidesPerView: 1,
+            },
+            1400: {
+                slidesPerView: 2,
+            },
         },
     });
-  
+
 
     /*--    
         Brand Active
@@ -305,16 +305,16 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         spaceBetween: 40,
         loop: true,
         breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-          },
+            0: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+            },
         },
     });
 
@@ -329,18 +329,18 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             clickable: true,
         },
         breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          576: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          992: {
-            slidesPerView: 4,
-          },
+            0: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            },
         },
     });
 
@@ -348,26 +348,80 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
     /*--    
       Progress Bar
-  -----------------------------------*/  
+  -----------------------------------*/
 
-    if($('.progress-line').length) {
-        $('.progress-line').appear(function(){
+    if ($('.progress-line').length) {
+        $('.progress-line').appear(function() {
             var el = $(this);
             var percent = el.data('width');
-            $(el).css('width', percent+'%');
-        }, {accY: 0});
+            $(el).css('width', percent + '%');
+        }, { accY: 0 });
     }
 
 
 
     /*--
         AOS
-    -----------------------------------*/   
+    -----------------------------------*/
     AOS.init({
         duration: 1200,
         once: true,
     });
 
+    // ------------- Contact Form --------------------------------
 
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+    const modal = document.getElementById("formModal");
+    const span = document.getElementsByClassName("close")[0];
 
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+                method: form.method,
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error(response.status);
+                }
+            })
+            .then(message => {
+                formMessage.style.color = "green";
+                formMessage.textContent = message;
+                form.reset();
+                showModal();
+            })
+            .catch(error => {
+                formMessage.style.color = "red";
+                if (error.message === '400') {
+                    formMessage.textContent = "Por favor complete todos los campos del formulario y use una dirección de correo válida.";
+                } else if (error.message === '403') {
+                    formMessage.textContent = "Hay un problema con el envío del formulario. Inténtelo de nuevo.";
+                } else if (error.message === '500') {
+                    formMessage.textContent = "Oops! Algo salió mal y no pudimos enviar su mensaje.";
+                } else {
+                    formMessage.textContent = "Ha ocurrido un error desconocido.";
+                }
+                showModal();
+            });
+    });
+
+    function showModal() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
